@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import {useEffect, useState} from "react";
+import {Component, useEffect, useState} from "react";
 import React from "react";
 import './App.css';
 
@@ -36,9 +36,45 @@ function App() {
         <ul>
               {data.map((v,idx)=><li key={`${idx}-${v}`}>{v}</li>)}
         </ul>
+        <FirstComponent></FirstComponent>
+        <SecondComponent></SecondComponent>
+        <ThirdComponent></ThirdComponent>
+        <FourthComponent></FourthComponent>
       </header>
+      <body>
+      </body>
     </div>
   );
+}
+
+function FirstComponent(){ // Function Component
+  return (
+    <div className='FirstComponent'> FirstComponent </div>
+  )
+}
+
+function SecondComponent(){
+  return (
+    <div className='SecondComponent'> SecondComponent </div>
+  )
+}
+
+class ThirdComponent extends Component{
+  
+  render() {
+    return (
+      <div className='ThirdComponent'> ThirdComponent </div>
+    )
+  }
+}
+
+class FourthComponent extends Component{
+  
+  render() {
+    return (
+      <div className='FourthComponent'> ThirdComponent </div>
+    )
+  }
 }
 
 export default App;
