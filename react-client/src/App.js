@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import React from "react";
 import './App.css';
-import LearningComponent from './components/examples/LeaningComponent';
+import LearningComponent from './components/examples/LearningComponent';
+import TodoApp from './components/todo/TodoApp';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <LearningComponent/> 
+      {/* <LearningComponent/>  */}
+      <TodoApp/>
     </div>
   );
 }
