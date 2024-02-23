@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import React from "react";
 import './App.css';
-import LearningComponent from './components/examples/LearningComponent';
+// import LearningComponent from './components/examples/LearningComponent';
 import TodoApp from './components/todo/TodoApp';
 
 
