@@ -42,28 +42,28 @@ function LoginComponent(){
         }
     }
 
-    function SuccessMessageComponent(){
-        if (showSuccessMessage){
-            return(
-                <div className='successMessage'>Login Sucess</div>
-            )
-        }
-        return null
-    }
+    // function SuccessMessageComponent(){
+    //     if (showSuccessMessage){
+    //         return(
+    //             <div className='successMessage'>Login Success</div>
+    //         )
+    //     }
+    //     return null
+    // }
     
-    function ErrorMessageComponent(){
-        if (showErrorMessage){
-            return(
-                <div className='errorMessage'>Login Failed</div>
-                )
-        }
-        return null
-    }
+    // function ErrorMessageComponent(){
+    //     if (showErrorMessage){
+    //         return(
+    //             <div className='errorMessage'>Login Failed</div>
+    //             )
+    //     }
+    //     return null
+    // }
 
     return(
         <div className="Login">
-            <SuccessMessageComponent />
-            <ErrorMessageComponent />
+            { showSuccessMessage && <div className='successMessage'>Login Success</div> }
+            { showErrorMessage && <div className='errorMessage'>Login Failed</div>}
             <div className="LoginForm">
                 <div>
                     <label>Username</label>
