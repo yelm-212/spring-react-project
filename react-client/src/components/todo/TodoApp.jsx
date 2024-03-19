@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate, useParams, Link} from 'react-router-dom'
 import './TodoApp.css'
 
 // This is main application container
@@ -100,12 +100,13 @@ function LoginComponent(){
 function WelcomeComponent(){
 
     const {username} = useParams();
+    const link = `/todos/${username}`
 
     return(
         <div className="WelcomeComponent">
             <h1> Welcome! {username} </h1>
             <div>
-                Manage your todos 
+                Manage your todos <Link to={link}>Link</Link>
             </div>
         </div>
     )
