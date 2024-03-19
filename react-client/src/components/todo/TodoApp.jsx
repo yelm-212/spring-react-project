@@ -104,7 +104,9 @@ function WelcomeComponent(){
     return(
         <div className="WelcomeComponent">
             <h1> Welcome! {username} </h1>
-            Welcome Component
+            <div>
+                Manage your todos 
+            </div>
         </div>
     )
 }
@@ -119,10 +121,16 @@ function ErrorComponent(){
 }
 
 function ListTodosComponent(){
+
+    const today = new Date()
+    const targetDate = new Date(today.getFullYear(),
+                                today.getMonth(),
+                                today.getDate() + 1 )
+
     const todos = [
-                    {id : 1, description: 'Learn React'},
-                    {id : 2, description: 'Learn Cloud'},
-                    {id : 3, description: 'Make Fullstack Project'}
+                    {id : 1, description: 'Learn React', done: false, targetDate: targetDate},
+                    {id : 2, description: 'Learn Cloud',  done: false, targetDate: targetDate},
+                    {id : 3, description: 'Make Fullstack Project', done: false, targetDate: targetDate}
                 ]
 
     return(
@@ -132,8 +140,10 @@ function ListTodosComponent(){
                 <table>
                     <thead>
                         <tr>
-                            <td>id </td>
-                            <td>description </td>
+                            <td>Id </td>
+                            <td>Description </td>
+                            <td>Is Done? </td>
+                            <td>Target Date </td>
                         </tr>
                     </thead>
                     <tbody>
@@ -143,6 +153,8 @@ function ListTodosComponent(){
                                 <tr key = {todo.id} >
                                     <td> {todo.id} </td>
                                     <td> {todo.description} </td>
+                                    <td> {todo.done.toString()} </td>
+                                    <td> {todo.targetDate.toDateString()} </td>
                                 </tr>
                             )
                         )
