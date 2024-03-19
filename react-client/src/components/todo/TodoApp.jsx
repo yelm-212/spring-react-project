@@ -6,15 +6,18 @@ import './TodoApp.css'
 export default function TodoApp(){
     return(
         <div className="TodoApp">
+            <HeaderComponent/>
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element= { <LoginComponent/> } />
                     <Route path='/login' element= { <LoginComponent/> } />
                     <Route path='/welcome/:username' element= { <WelcomeComponent/> } />
                     <Route path='/todos/:username' element= { <ListTodosComponent/> } />
+                    <Route path='/logout' element= { <LogOutComponent/> } />
                     <Route path='*' element= { <ErrorComponent/> } />
                 </Routes>
             </BrowserRouter>
+            <FooterComponent />
         </div>
     )
 }
@@ -117,6 +120,30 @@ function ErrorComponent(){
         <div className="ErrorComponent">
             <h2> Page doesn't exists </h2>
             <div> Contact Admin </div>
+        </div>
+    )
+}
+
+function HeaderComponent(){
+    return(
+        <div className="HeaderComponent">
+            <header>Header </header>
+        </div>
+    )
+}
+
+function FooterComponent(){
+    return(
+        <div className="FooterComponent">
+            <footer>Footer </footer> 
+        </div>
+    )
+}
+
+function LogOutComponent(){
+    return(
+        <div className="LogOutComponent">
+            <h1>Logged out Successfully!</h1>
         </div>
     )
 }
