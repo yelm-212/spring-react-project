@@ -137,7 +137,7 @@ function FooterComponent(){
         <div className="FooterComponent">
             <footer>Footer </footer> 
         </div>
-    )
+    ) 
 }
 
 function LogOutComponent(){
