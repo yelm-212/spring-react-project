@@ -6,8 +6,8 @@ import './TodoApp.css'
 export default function TodoApp(){
     return(
         <div className="TodoApp">
-            <HeaderComponent/>
             <BrowserRouter>
+                <HeaderComponent/>
                 <Routes>
                     <Route path='/' element= { <LoginComponent/> } />
                     <Route path='/login' element= { <LoginComponent/> } />
@@ -16,8 +16,8 @@ export default function TodoApp(){
                     <Route path='/logout' element= { <LogOutComponent/> } />
                     <Route path='*' element= { <ErrorComponent/> } />
                 </Routes>
+                <FooterComponent />
             </BrowserRouter>
-            <FooterComponent />
         </div>
     )
 }
@@ -125,17 +125,33 @@ function ErrorComponent(){
 }
 
 function HeaderComponent(){
+
     return(
-        <div className="HeaderComponent">
-            <header>Header </header>
-        </div>
+        <header className='header'>
+            <div className='container'>
+                <ul className='navbar-nav'>
+                    <li className='nav-item'>
+                        <a className='nav-link' href='https://yelm-212.github.io/'>
+                            Yelm-212
+                        </a>
+                        <Link className='nav-link' To='/'>
+                            Home
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </header>
     )
 }
 
 function FooterComponent(){
     return(
         <div className="FooterComponent">
-            <footer>Footer </footer> 
+            <footer className='footer'>
+                <div className='container'>
+                    My Footer
+                </div>
+            </footer> 
         </div>
     ) 
 }
@@ -162,10 +178,10 @@ function ListTodosComponent(){
                 ]
 
     return(
-        <div className="ListTodosComponent">
+        <div className="container">
             <h2> Todo Lists </h2>
             <div>
-                <table>
+                <table className="table">
                     <thead>
                         <tr>
                             <td>Id </td>
