@@ -125,6 +125,7 @@ function ErrorComponent(){
 }
 
 function HeaderComponent(){
+    //TODO: 이거 Home 경로를 로그인했으면 `/welcome/${username}` 으로 이동하게 하려면 어떻게 할지 생각해보기
 
     return(
         <header className='header'>
