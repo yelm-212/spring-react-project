@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useAuth } from './security/AuthContext';
 
 function HeaderComponent() {
-    // const { username, number } = useContext(AuthContext);
 
     const authContext = useAuth()
 
