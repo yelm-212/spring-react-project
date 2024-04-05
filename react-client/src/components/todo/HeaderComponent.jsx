@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { AuthContext } from './security/AuthContext';
-import { useContext } from 'react';
+import { useAuth } from './security/AuthContext';
 
 function HeaderComponent() {
-    const { username, number } = useContext(AuthContext);
+    // const { username, number } = useContext(AuthContext);
 
-    console.log(username, number);
+    const authContext = useAuth()
+
+    const username = authContext.username
 
     return (
         <header className="border-bottom border-light border-5 mb-5 p-2">

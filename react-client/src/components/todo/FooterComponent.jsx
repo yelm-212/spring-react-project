@@ -1,10 +1,11 @@
-import { AuthContext } from './security/AuthContext';
-import { useContext } from 'react';
+import { useAuth } from './security/AuthContext';
 
 function FooterComponent(){
-    const authContext = useContext(AuthContext);
+    // const authContext = useContext(AuthContext);
 
-    console.log(` Footer component : ${authContext.number} `);
+    const authContext = useAuth()
+
+    // console.log(` Footer component : ${authContext.number} `);
 
     return(
         <div className="FooterComponent">
