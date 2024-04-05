@@ -1,9 +1,12 @@
 import { useParams, Link } from 'react-router-dom'
+import { useAuth } from './security/AuthContext'
 
 function WelcomeComponent(){
 
-    const {username} = useParams();
-    const link = `/todos`
+    const authContext = useAuth()
+    const username = authContext.username
+
+    const link = `/todos/${username}`
 
     return(
         <div className="WelcomeComponent">
