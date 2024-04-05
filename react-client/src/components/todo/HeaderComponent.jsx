@@ -6,6 +6,8 @@ function HeaderComponent() {
 
     const authContext = useAuth()
 
+    console.log(authContext)
+
     const username = authContext.username
 
     return (
