@@ -12,7 +12,7 @@ import java.util.Optional;
 @RestController
 public class TestController {
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public ResponseEntity getTest(){
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
